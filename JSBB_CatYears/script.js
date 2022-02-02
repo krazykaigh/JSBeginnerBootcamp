@@ -1,4 +1,4 @@
-/* jshing esversion: 8 */
+/* jshint esversion: 8 */
 /* 
 Here's how you convert your age from "human years" to "cat years":
 
