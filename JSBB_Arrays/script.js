@@ -14,5 +14,5 @@ var myFavoriteTeam = baseballTeams.indexOf(0);
 
 
 console.log("The array baseballTeams consists of " + baseballTeams);
-console.log("The length of the array baseballTeams = " + baseballTeams.length());
+console.log("The length of the array baseballTeams = " + baseballTeams.length);
 console.log("The variable myFavoriteTeam = " + myFavoriteTeam);
