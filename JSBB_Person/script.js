@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 
-// Chanllenge
+// Challenge
 // build a person with object literal notation
 // use three properties and value pairs  consisting of a string, number, and a boolean value
 
