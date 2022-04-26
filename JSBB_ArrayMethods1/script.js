@@ -40,3 +40,11 @@ shoppingList.pop();
 console.log('The shoppingList array now consists of the following: ' + shoppingList);
 
 console.log("The new length of the array shoppingList = " + shoppingList.length);
+
+var sarahTakesFromFront = shoppingList.shift();
+console.log("\nSarah took the " + sarahTakesFromFront + " from the shoppingList array");
+console.log("The new length of the array shoppingList = " + shoppingList.length);
+
+var philTakesFromEnd = shoppingList.pop();
+console.log("\nPhil took the " + philTakesFromEnd + " from the shoppingList array");
+console.log("The new length of the array shoppingList = " + shoppingList.length);
