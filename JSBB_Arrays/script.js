@@ -10,7 +10,7 @@ var baseballTeams = ['Dodgers', 'Giants', 'Mets', 'Yankees', 'Astros'];
 
 // Possible solution
 console.log("The array baseballTeams consists of " + baseballTeams);
-console.log("The current length of the ength of the array baseballTeams = " + baseballTeams.length);
+console.log("The current length of the array baseballTeams = " + baseballTeams.length);
 
 console.log("\nThe \'Nationals\' is now being appended to the end of the baseballTeams array using the push function\n");
 baseballTeams.push('Nationals');
