@@ -4,7 +4,7 @@
 // practice
 var bigDog = ['Golden Retriever','St. Bernard', 'German Shepherd', 'Bernese Mountain Dog'];
 
-var lilDog = ['terrier', 'weiner dog', 'corgie', 'miniature pinscher']
+var lilDog = ['terrier', 'weiner dog', 'corgie', 'miniature pinscher'];
 
 var allDogs = bigDog.concat(lilDog);
 
