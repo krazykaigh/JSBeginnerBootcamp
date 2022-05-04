@@ -26,4 +26,26 @@ console.log("\nThe allColorsReversed array = " + allColorsReversed);
 var moreAllColorsSorted = moreAllColors.sort();
 console.log("\nThe moreAllColorsSorted array = " + moreAllColorsSorted);
 
+var weather = ['rainy', 'cold', 'chilly', 'snowy', 'cloudy', 'hot', 'warm', 'humid'];
+console.log("\nThe weather array = " + weather);
+
+// Challenge SLICE
+// create var winter and fill with the winter values
+// create var summer and fill with the summer values
+
+var winter = weather.slice(0,5);
+console.log("\nThe winter array = " + winter);
+
+var summer = weather.slice(5);
+console.log("\nThe summer array = " + summer);
+
+// Challenge Reverse Slice
+var winterReverse = weather.slice(0,-4);
+console.log("\nThe winter array = " + winter);
+
+var summerReverse = weather.slice(-3,-1);
+console.log("\nThe summer array = " + summer);
+
+
+
 
