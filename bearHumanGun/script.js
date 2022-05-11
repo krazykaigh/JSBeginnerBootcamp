@@ -5,59 +5,43 @@ console.log('Please choose your power: ');
 var choice = prompt('\n1. Bear\n2. Human\n3. Gun' );
 var choiceName = 'CHANGE ME';
 console.log('You picked number :' + choice);2
-switch(choice) {
-    case "1":
-        choiceName = "Bear";
-        console.log('You chose a ' + choiceName);
-        break;
-    case "2":
-        choiceName = "Human";
-        console.log('You chose a ' + choiceName);
-        break;
-    case "3":
-        choiceName = "Gun";
-        console.log('You chose a ' + choiceName);
-        break;
+if (choice == 1) {
+    choiceName = "Bear";
+} else if (choice == 2) {
+    choiceName = "Human";    
+} else if (choice == 3) {
+    choiceName = "Gun";
 }
 
 // 2. Get the computer's choice.
 var compChoice =  Math.floor(Math.random() *3 ) + 1;
 var compChoiceName = '';
 console.log('The computer picked number: ' + compChoice);
-switch(compChoice) {
-    case "1":
-        compChoiceName = "Bear";
-        console.log('The computer chose a ' + compChoiceName);
-        console.log("AT BEAR COMPCHOICE")
-        break;
-    case "2":
-        compChoiceName = "Human";
-        console.log("AT HUMAN COMPCHOICE")
-        console.log('The computer chose a ' + compChoiceName);
-        break;
-    case "3":
-        compChoiceName = "Gun";
-        console.log("AT GUN COMPCHOICE")
-        console.log('The computer chose a ' + compChoiceName);
-        break;
+
+if (compChoice == 1) {
+    compChoiceName = "Bear";
+} else if (compChoice == 2) {
+    compChoiceName = "Human";    
+} else if (compChoice == 3) {
+    compChoiceName = "Gun";
 }
-var BGH = function(choice, choiceName, compChoice, compChoiceName) {
-if (choice == compChoice) {
-    return 'Tie! You both picked: ' + choiceName;
-} else if ((choice == 1) && (compChoice == 2)) {
-    return 'You WIN!!! Your ' + choiceName + ' just killed the computer\'s ' + compChoiceName + '.';
-} else if ((choice == 1) && (compChoice == 3)) {
-    return 'You LOSE... You were shot and killed by the computer\'s ' + compChoiceName + '.';
-} else if ((choice == 2) && ((compChoice < choice) || (compChoice > choice))) {
-    return 'You LOSE! The computer\'s ' + compChoiceName + ' beat your' + choiceName;
-} else if ((choice == 3) && (compChoice < choice )){
-    return 'You WIN Gun Lover!!! You just killed a ' + choiceName + '.';
-}
-};
 
 
 // 3. Compare the two choices and determine a winner.
 
-// 4l. Start the program and display the results. 
+var BGH = function(choice, choiceName, compChoice, compChoiceName) {
+    if (choice == compChoice) {
+        return 'Tie! You both picked: ' + choiceName;
+    } else if ((choice == 1) && (compChoice == 2)) {
+        return 'You WIN!!! Your ' + choiceName + ' just killed the computer\'s ' + compChoiceName + '.';
+    } else if ((choice == 1) && (compChoice == 3)) {
+        return 'You LOSE... You were shot and killed by the computer\'s ' + compChoiceName + '.';
+    } else if ((choice == 2) && ((compChoice < choice) || (compChoice > choice))) {
+        return 'You LOSE! The computer\'s ' + compChoiceName + ' beat your ' + choiceName;
+    } else if ((choice == 3) && (compChoice < choice )){
+        return 'You WIN Gun Lover!!! You just killed a ' + compChoiceName + '.';
+    }
+};
+// 4. Start the program and display the results. 
 console.log(BGH(choice, choiceName, compChoice, compChoiceName));
 
