@@ -18,7 +18,7 @@ function inputCaloriesByDay(day) {
     }   else if (day === 'Sunday'){
         calories = 1225;
     }
-        console.log('Calories \\Typeof = ' + calories, typeof calories);   
+      /*  */    console.log('Calories \\Typeof = ' + calories, typeof calories);   
     return (calories);
 }
 /* // Tests for inputCaloriesByDay function
@@ -38,6 +38,8 @@ console.log(inputCaloriesByDay("Saturday"));
 
 } */
 
+
+
 function getTotalCalories() {
     return inputCaloriesByDay('Monday') +
     inputCaloriesByDay('Tuesday') +
@@ -48,8 +50,43 @@ function getTotalCalories() {
     inputCaloriesByDay('Sunday');
   }
 
-console.log(getTotalCalories());
 
 function getIdealCalories() {
-    
+    var idealDailyCalories = 2225;
+    return idealDailyCalories * 7;
 }
+
+
+/* function calculateHealthPlan() {
+    var messageCalories = '';
+    var actualCalories, idealCalories = 0;
+    actualCalories = getTotalcalories();
+    idealCalories = getIdealCalories();
+    if (actualCalories === idealCalories){
+        messageCalories = 'You ate just the right amount of food';
+    }   else if (actualCalories > idealCalories){
+        messageCalories = 'Time to head to the gym!';
+    }   else if (actualCalories < idealCalories){
+        messageCalories = 'Time for seconds';
+    }   return messageCalories;
+
+} */
+
+function calculateHealthPlan() {
+  var actualCalories = getTotalCalories();
+  var idealCalories = getIdealCalories();
+  if (actualCalories === idealCalories) {
+    return 'You ate just the right amount!';
+  }
+  if (actualCalories > idealCalories) {
+    return 'Time to head to the gym!';
+  } else {
+    return 'Time for seconds!';
+  }
+}
+/*  */
+console.log('The total calories you consumed this week are: ' + getTotalCalories());
+
+console.log('The ideal amount of calories you should consume are ' + getIdealCalories());
+
+console.log(calculateHealthPlan());
