@@ -1,7 +1,8 @@
 /*jshint esversion: 8 */
-
-function inputCaloriesByDay(day) {
     var calories = 0;
+    var totalCalories = 0;
+function inputCaloriesByDay(day) {
+
     // Use if/else
     if (day === 'Monday'){
         calories = 3500;
@@ -18,7 +19,8 @@ function inputCaloriesByDay(day) {
     }   else if (day === 'Sunday'){
         calories = 1225;
     }
-      /*  */    console.log('Calories \\Typeof = ' + calories, typeof calories);   
+    totalCalories += calories;
+      /*      console.log('Calories \\Typeof = ' + calories, typeof calories); */  
     return (calories);
 }
 /* // Tests for inputCaloriesByDay function
@@ -29,18 +31,19 @@ console.log(inputCaloriesByDay("Friday"));
 console.log(inputCaloriesByDay("Saturday"));
  */
 
-/* function getTotalCalories(){
-    var totalCalories = 0;
+function getTotalCalories(){
+    var weekday;
     const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    totalCalories = totalCalories + weekdays.forEach(inputCaloriesByDay);
-    console.log('TotalCalories \\Typeof = ' + totalCalories, typeof totalCalories);
+// changed this to 
+    weekday = weekdays.forEach(inputCaloriesByDay);
+    //console.log('TotalCalories \\Typeof = ' + totalCalories, typeof totalCalories);
     return totalCalories;
 
-} */
+}
 
 
 
-function getTotalCalories() {
+/* function getTotalCalories() {
     return inputCaloriesByDay('Monday') +
     inputCaloriesByDay('Tuesday') +
     inputCaloriesByDay('Wednesday') +
@@ -48,7 +51,7 @@ function getTotalCalories() {
     inputCaloriesByDay('Friday') +
     inputCaloriesByDay('Saturday') + 
     inputCaloriesByDay('Sunday');
-  }
+  } */
 
 
 function getIdealCalories() {
@@ -85,7 +88,7 @@ function calculateHealthPlan() {
   }
 }
 /*  */
-console.log('The total calories you consumed this week are: ' + getTotalCalories());
+console.log('The total calories you consumed this week are: ' + totalCalories());
 
 console.log('The ideal amount of calories you should consume are ' + getIdealCalories());
 
